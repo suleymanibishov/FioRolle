@@ -1,0 +1,66 @@
+﻿@model FioRolle.ViewModels.RegisterVM
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="mkdf-content">
+    <div class="mkdf-content-inner">
+        <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-title-content-va-middle"
+             style="height: 225px;background-color: #fafaf9" data-height="225">
+            <div class="mkdf-title-wrapper" style="height: 225px">
+                <div class="mkdf-title-inner">
+                    <div class="mkdf-grid">
+                        <h1 class="mkdf-page-title entry-title">My Account</h1>
+                        <span class="mkdf-page-subtitle">Where flowers are our inspiration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mkdf-container mkdf-default-page-template">
+            <div class="mkdf-container-inner clearfix">
+                <div class="mkdf-grid-row">
+                    <div class="mkdf-page-content-holder mkdf-grid-col-12">
+                        <div class="woocommerce">
+                            <div class="woocommerce-notices-wrapper"></div>
+                            <h2>Register</h2>
+                            <form class="woocommerce-form woocommerce-form-login login" asp-action="register" method="post">
+                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                    <label asp-for="UserName"></label>
+                                    <input asp-for="UserName" class="woocommerce-Input woocommerce-Input--text input-text" />
+                                    <span asp-validation-for="UserName"></span>
+                                </p>
+                                
+                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                    <label asp-for="Email"></label>
+                                    <input asp-for="Email" class="woocommerce-Input woocommerce-Input--text input-text" />
+                                    <span asp-validation-for="Email"></span>
+                                </p>
+
+                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                    <label asp-for="Password"></label>
+                                    <input class="woocommerce-Input woocommerce-Input--text input-text"
+                                           asp-for="Password" />
+                                    <span asp-validation-for="Password"></span>
+                                </p>
+                                <p class="form-row">
+
+
+                                    <button type="submit"
+                                            class="woocommerce-button button woocommerce-form-login__submit"
+                                            name="login" value="Log in">
+                                        Log in
+                                    </button>
+                                </p>
+                                <div asp-validation-summary="ModelOnly"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
